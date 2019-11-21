@@ -1,13 +1,16 @@
 # POMAP :robot:
 ## 실내 정보를 자동으로 인식하고 바뀐 정보를 스스로 업데이트하는 인공지능 로봇
 
-#### 프로젝트 주요 이슈
-1. 공간전체정보인식을 어떻게 할 것 인가
+#### 프로젝트 주요 이슈 :dart:
+1. 공간전체정보인식을 어떻게 할 것 인가, 터틀봇 제어 문제
+ * 2DLidar 기반 RPLidar 사용
+2. 인식한 전체 공간 정보에서 구역 인식(?)
+ * SLAM 맵핑 정보와 웹캠으로 인식한 이미지 정보와 비교(?)
+3. 간판의 변화 감지(POI 변화 인식 문제
+ * 
 
 
-
-
-#### REFERENCE
+#### REFERENCE :file_cabinet:
 | TITLE | URL |
 | ----- | -------- |
 | 셀프 업데이팅 맵 - 딥러닝을 활용한 실내 매장 변화 검출 알고리즘 개발기 | https://www.naverlabs.com/storyDetail/131 |
@@ -19,6 +22,8 @@
 | IROS2019 SLAM 관련 논문 정리 | http://jinyongjeong.github.io/2019/11/07/IROS2019_SLAM_list/ |
 | RPLidar Hector SLAM | https://github.com/NickL77/RPLidar_Hector_SLAM |
 | hector_slam | https://github.com/tu-darmstadt-ros-pkg/hector_slam |
+
+
 
 
 #### 191120 
