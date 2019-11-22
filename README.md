@@ -14,7 +14,7 @@
 | TITLE | URL |
 | ----- | -------- |
 | 셀프 업데이팅 맵 - 딥러닝을 활용한 실내 매장 변화 검출 알고리즘 개발기 | https://www.naverlabs.com/storyDetail/131 |
-| AVER LABS' Indoor Dataset - COEX POI Change Detection (Jun. 2018 and Sep. 2018) | https://www.naverlabs.com/en/storyDetail/125 |
+| NAVER LABS' Indoor Dataset - COEX POI Change Detection (Jun. 2018 and Sep. 2018) | https://www.naverlabs.com/en/storyDetail/125, https://europe.naverlabs.com/blog/making-maps-evergreen/ |
 | 고정밀 지도를 자동으로 업데이트하는 기술 | https://www.naverlabs.com/storyDetail/139 |
 | 로봇이 보는 세상, 매핑로봇 M1X | https://www.naverlabs.com/storyDetail/138 |
 | AI관련 논문과 코드를 같이 볼 수 있는 사이트 | https://paperswithcode.com/ |
@@ -23,6 +23,7 @@
 | RPLidar Hector SLAM | https://github.com/NickL77/RPLidar_Hector_SLAM |
 | hector_slam | https://github.com/tu-darmstadt-ros-pkg/hector_slam |
 | Google Cloud Vision API | https://cloud.google.com/vision/docs/features-list?refresh=1 |
+
 
 
 
