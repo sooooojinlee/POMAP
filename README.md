@@ -6,7 +6,7 @@
  * 2DLidar 기반 RPLidar 사용
 2. 인식한 전체 공간 정보에서 구역 인식(?)
  * SLAM 맵핑 정보와 웹캠으로 인식한 이미지 정보와 비교(?)
-3. 간판의 변화 감지(POI 변화 인식 문제
+3. 간판의 변화 감지(POI 변화 인식 문제)
  * 
 
 
@@ -22,6 +22,8 @@
 | IROS2019 SLAM 관련 논문 정리 | http://jinyongjeong.github.io/2019/11/07/IROS2019_SLAM_list/ |
 | RPLidar Hector SLAM | https://github.com/NickL77/RPLidar_Hector_SLAM |
 | hector_slam | https://github.com/tu-darmstadt-ros-pkg/hector_slam |
+| Google Cloud Vision API | https://cloud.google.com/vision/docs/features-list?refresh=1 |
+
 
 
 
@@ -42,3 +44,5 @@
 * YOLO
  * 이미지 인식을 통해 객체를 구분하여 라벨링하는 것까지 성공했으나 동영상과 웹캠 실행의 오류 문제가 생김
  * 동영상 인식을 위해 CUDA 및 openCV 재설치 중에 시스템 오류발생 / 문제해결 
+
+#### 191122
