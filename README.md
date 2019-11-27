@@ -4,10 +4,13 @@
 #### 프로젝트 주요 이슈 :dart:
 1. 공간전체정보인식을 어떻게 할 것 인가, 터틀봇 제어 문제
  * 2DLidar 기반 RPLidar 사용
-2. 인식한 전체 공간 정보에서 구역 인식(?)
- * SLAM 맵핑 정보와 웹캠으로 인식한 이미지 정보와 비교(?)
+ * 카메라 캘리브레이션
+ * 터틀봇에 달린 센서 많음(웹캠 2대, 파이카메라 1대, RPLidar 1대 등) 
+  * 라즈베리파이 어떻게 효율적으로 쓸지
+2. 인식한 전체 공간 정보에서 구역 인식
+ * SLAM 맵핑 정보와 웹캠으로 인식한 이미지 정보와 비교
 3. 간판의 변화 감지(POI 변화 인식 문제)
- * 
+ * d(A, P)가 크고 d(A, N)가 작은 어려운 Train dataset 만들기 
 
 
 #### REFERENCE :file_cabinet:
@@ -48,3 +51,9 @@
 
 #### 191122 금
 * 3차 중간발표
+
+
+#### 191126 화
+* 터틀봇3 도착해서 조립함
+* pytorch로 triplet [잘 돌아가는지 봄](https://github.com/CoinCheung/triplet-reid-pytorch)
+* 맵핑할 공간 세트 정의하기(NaverLABS cvpr2019 Did it change? Learning to Detect Poit-of-Interest Changes for Proactive Map Updates 논문 보기 시작하면서 세트 상황 ) 
