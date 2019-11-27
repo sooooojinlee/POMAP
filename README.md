@@ -30,7 +30,7 @@
 
 
 <details>
-<summary>:calendar: 진행상황</summary>
+<summary> ### :calendar: 진행상황</summary>
 <div markdown="1">
 
 #### 191120 수
