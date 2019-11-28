@@ -61,6 +61,11 @@
 * 맵핑할 공간 세트 정의하기(NaverLABS cvpr2019 Did it change? Learning to Detect Poit-of-Interest Changes for Proactive Map Updates 논문 보기 시작하면서 세트 상황 ) 
 
 
+#### 191117 수
+* 라즈베리파이에 ros설치 시도 중(boost error, j1 error남)
+* 센서 데이터 처리 어떻게 해야할지 ROS 튜토리얼이랑 비슷한 프로젝트 소스코드 보면서 공부하고 있음
+* 
+
 </div>
 </details>
 
