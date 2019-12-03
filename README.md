@@ -74,4 +74,61 @@
 
 
 
+#### ~191202 월 까지 내가 한 일(trello backup 용)
+
+# 191203(~191202 까지의 시도)
+
+* 라즈베리파이 한번 밀었음(191202)
+* 트렐로 내 카드도 밀림 :innocent:
+  * 깃에도 빠짐없이 기록하기로,,  
+* Remote PC 와 라즈베리파이에 ROS 설치 및 라즈베리파이 기본 설정 후 각 PC에 
+```$ sudo apt-get install ssh```
+or
+```$ sudo apt-get install openssh-server```
+둘 다 설치해 봄
+
+* Remote PC와 라즈베리파이 모두 
+```/etc/ssh/ssh_config```
+```/etc/ssh/sshd_config```  파일 모두 Port 22 주석 처리 해제하기
+gedit으로 편집하면 비교적(?) 편하지만 라즈베리파이는 gedit 편집기 안됨
+
+* 위 파일 저장하고 
+```service sshd restart``` 
+ssh 서비스를 재시작
+
+* 라즈베리파이에서 
+```$ sudo systemctl enable ssh```
+```$ sudo systemctl start ssh``` 하고  
+```$ ssh pirl@192.168.0.15``` 입력하고 패스워드 입력하면 ssh 통신 될 거임  
+
+* 라즈베리파이에서 bringup 시도 했을 때  
+[ERROR] unable to contact master at [localhost:11311] 
+the traceback for the exception was written to the log file  
+이 오류가 뜨는 이유가 OpenCR 펌웨어 업데이트 때문이라는 ROS wiki의 글을 보고 시도해 봤으나 여전히 안되고 topic 메시지들이 전송이 안됨
+
+**Remote PC와 라즈베리파이는 같은 라우터의 네트워크를 공유해야함**
+
+##### 여기까지 설정이 끝났다면 bringup 시도하기
+
+1. Remote PC [terminal 1]
+``` $ roscore```  
+
+
+2. 라즈베리파이
+``` $ roslaunch turtlebot3_bringup turtlebot3_robot.launch```  
+여기서 publisher, subscriber 메세지 송수신 되야함
+
+
+3. Remote PC
+``` $ export TURTLEBOT3_MODEL=burger``` [terminal 2]
+``` $ roslaunch turtlebot3_bringup turtlebot3_remote.launch```[terminal 3]
+``` $ rosrun rviz rviz -d `rospack find turtlebot3_description`/rviz/model.rviz ```  
+실행했을 때 오류생기는 노드 모두 없어야 함
+
+
+* 원격 작동(키로 터틀봇 제어하기)
+``` $ export TURTLEBOT3_MODEL=burger```
+``` $ roslaunch turtlebot3_teleop turtlebot3_teleop_key.launch```
+
+여기까지 꼭 해보기
 
