@@ -69,14 +69,10 @@
 
 #### 191128 목
 * 윤은영 교수님 피드백 -> 라이다 지도와 이미지 위치를 연동할 논문 찾아보라 하심
-</div>
-</details>
-
 
 
 #### ~191202 월 까지 내가 한 일(trello backup 용)
 
-# 191203(~191202 까지의 시도)
 
 * 라즈베리파이 한번 밀었음(191202)
 * 트렐로 내 카드도 밀림 :innocent:
@@ -131,4 +127,11 @@ the traceback for the exception was written to the log file
 ``` $ roslaunch turtlebot3_teleop turtlebot3_teleop_key.launch```
 
 여기까지 꼭 해보기
+
+
+</div>
+</details>
+
+
+
 
