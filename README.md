@@ -129,6 +129,72 @@ the traceback for the exception was written to the log file
 여기까지 꼭 해보기
 
 
+
+
+* 우리 프로젝트에 참고할 [코드](https://github.com/sooooojinlee/POMAP/blob/master/pomap_ref_code/move.py) 분석 중
+
+* 터틀봇 제어와 독립적인 라즈베리파이랑 웹캠 어떻게 할지 보고있음
+
+* 라즈베리파이에 웹캠을 연결하려면 전력을 외부에서 공급받는 웹캠을 이용해야 할 구도 있음  
+
+* 일단 라즈베리파이에 opencv 3.4.0 버전 깔아보긴 함 -> 안돌아갈 거 같음 :sob:
+
+* 라즈베리파이에서 웹캠 영상을 웹으로 stream 해서 서버로 보내기 시도 중  -> 작성하기
+
+
+### 라즈베리파이에서 mjpg-streamer를 사용하여 웹캠 스트리밍 하기
+* 라즈베리파이에서 카메라 쓸 수 있도록 설정하기
+```sudo raspi-config```
+* mjpg-streamer 소스코드를 다운로드 받을 디렉토리 생성
+```$ mkdir project```
+```$ cd project```
+* 깃허브에서 소스 코드를 다운로드 받기 위해 라즈베리파이에 git 깔기
+```$ sudo apt-get install git```
+* mjpg-streamer 소스코드 받기
+```$ git clone https://github.com/jacksonliam/mjpg-streamer.git```
+* mjpg-streamer 컴파일 하기 위한 패키지 설치 -> opencv 깔면서 깔림 
+```$ sudo apt-get install cmake python-imaging libjpeg-dev build-essential```
+* 컴파일하고 설치 진행
+```$ cd mjpg-streamer/mjpg-streamer-experimental/
+```$ make CMAKE_BUILD_TYPE=Debug```
+```$ sudo make install```
+```$ cd```
+* 웹캠으로부터 캡처한 영상을 http포트 8090으로 스트리밍하도록 함
+```$ mjpg_streamer -i "input_uvc.so" -o "output_http.so -p 8090 -w /usr/local/share/mjpg-streamer/www/"
+
+```$ sudo modprobe bcm2835-v4l2```
+```$ mjpg_streamer -i "input_uvc.so" -o "output_http.so -p 8090 -w /usr/local/share/mjpg-streamer/www/"```
+
+* 라즈베리파이에서 localhost:8090 접속
+
+* 192.168.0.91:8090/?action=snapshot 으로 영상 전송받기
+  * 아마 opencv에서
+ ```cap = cv.VideoCapture('http://192.168.0.91:8090/?action=stream')``` 이런식으로 받아오면 될듯
+
+#  191206 
+
+* 라즈베리파이와 카메라에 대한 이슈는 이 분 블로그에 잘 정리되어 있음
+  * [Raspberry PI 3에 로지텍 웹캠 C922 연결하여 테스트](https://webnautes.tistory.com/909?category=762590)
+  * [Raspberry Pi Camera Module( pi camera ) 사용하는 방법](https://webnautes.tistory.com/929?category=762590)
+  * [Raspberry Pi Camera Module( pi camera )를 위해 OpenCV + raspicam 사용하기](https://webnautes.tistory.com/956?category=762590)
+  * [Raspberry Pi 에서 mjpg-streamer를 사용하여 웹캠 스트리밍하기](https://webnautes.tistory.com/1261)
+
+
+* 학부생 분의 도움으로 통신 문제 간단하게 해결 :sunglasses: 
+  * 라즈베리파이와 워크스테이션이 같은 라우터를 공유하지 않아도 http 서버로 접근이 가능한지?  
+    -> 불가능하다. 네트워크 프로토콜 계층문제 때문에 복잡해진다.
+  * 소켓통신이 꼭 필요할 것 같아 보이는가?
+    -> 필요없다. 편한거 쓰면 되고 소켓통신을 하려면 멀티스레드 처리해야한다.
+  
+  
+* 웹캠으로부터 영상을 받아 워크 스테이션에 이미지로 저장하기
+  * 1. 워크 스테이션  
+   ``` $ ssh pi@192.168.0.37``` 
+    패스워드 입력 후 접속
+    라즈베리파이에 배치파일 만들어서 자동실행가능하도록 만들었음
+
+
+
 </div>
 </details>
 
