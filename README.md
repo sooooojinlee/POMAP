@@ -155,12 +155,12 @@ the traceback for the exception was written to the log file
 * mjpg-streamer 컴파일 하기 위한 패키지 설치 -> opencv 깔면서 깔림 
 ```$ sudo apt-get install cmake python-imaging libjpeg-dev build-essential```
 * 컴파일하고 설치 진행
-```$ cd mjpg-streamer/mjpg-streamer-experimental/
+```$ cd mjpg-streamer/mjpg-streamer-experimental/```
 ```$ make CMAKE_BUILD_TYPE=Debug```
 ```$ sudo make install```
-```$ cd```
+```$ cd```  
 * 웹캠으로부터 캡처한 영상을 http포트 8090으로 스트리밍하도록 함
-```$ mjpg_streamer -i "input_uvc.so" -o "output_http.so -p 8090 -w /usr/local/share/mjpg-streamer/www/"
+```$ mjpg_streamer -i "input_uvc.so" -o "output_http.so -p 8090 -w /usr/local/share/mjpg-streamer/www/"```
 
 ```$ sudo modprobe bcm2835-v4l2```
 ```$ mjpg_streamer -i "input_uvc.so" -o "output_http.so -p 8090 -w /usr/local/share/mjpg-streamer/www/"```
