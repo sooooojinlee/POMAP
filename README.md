@@ -171,7 +171,7 @@ the traceback for the exception was written to the log file
   * 아마 opencv에서
  ```cap = cv.VideoCapture('http://192.168.0.91:8090/?action=stream')``` 이런식으로 받아오면 될듯
 
-#  191206 
+####  191206 
 
 * 라즈베리파이와 카메라에 대한 이슈는 이 분 블로그에 잘 정리되어 있음
   * [Raspberry PI 3에 로지텍 웹캠 C922 연결하여 테스트](https://webnautes.tistory.com/909?category=762590)
